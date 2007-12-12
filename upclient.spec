@@ -1,6 +1,6 @@
 %define	name	upclient
 %define	version	5.0
-%define	release	1.b5.2mdk
+%define	release	%mkrel 1.b5.2
 
 Name:		%{name}
 Version:	%{version}
