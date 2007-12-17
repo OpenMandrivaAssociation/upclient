@@ -12,7 +12,7 @@ Source0:	http://uptime.hexon.cx/download/%{name}-%{version}b5.tar.bz2
 Source1:	%{name}.init.bz2
 Source2:	%{name}.conf.bz2
 URL:		http://uptime.hexon.cx/
-PreReq:		rpm-helper
+Requires(post,preun):	rpm-helper
 
 %description
 Upclient is a small program that sends the uptime of the machine it's
