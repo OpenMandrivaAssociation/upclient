@@ -13,7 +13,6 @@ Source1:	%{name}.init.bz2
 Source2:	%{name}.conf.bz2
 URL:		http://uptime.hexon.cx/
 PreReq:		rpm-helper
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Upclient is a small program that sends the uptime of the machine it's
