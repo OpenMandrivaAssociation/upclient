@@ -8,6 +8,7 @@ Release:	%{release}
 Summary:	Sends the uptime of the machine it's running on to a server
 License:	GPL
 Group:		System/Servers
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0:	http://uptime.hexon.cx/download/%{name}-%{version}b5.tar.bz2
 Source1:	%{name}.init.bz2
 Source2:	%{name}.conf.bz2
