@@ -36,14 +36,14 @@ Upclient is totally freeware, so spread it around and make the list grow :)
 rm -rf $RPM_BUILD_ROOT
 (cd src; %makeinstall)
 rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/%{name}
-install -d $RPM_BUILD_ROOT{%{_initrddir},%{_localstatedir}/%{name},%{_var}/run/%{name}}
+install -d $RPM_BUILD_ROOT{%{_initrddir},%{_localstatedir}/lib/%{name},%{_var}/run/%{name}}
 bzcat %{SOURCE1} > $RPM_BUILD_ROOT%{_initrddir}/%{name}
 bzcat %{SOURCE2} > $RPM_BUILD_ROOT%{_sysconfdir}/%{name}.conf
 chmod 755 $RPM_BUILD_ROOT{%{_initrddir},%{_sbindir}}/%{name}
 chmod 644 $RPM_BUILD_ROOT%{_sysconfdir}/%{name}.conf
 
 %pre
-%_pre_useradd %{name} %{_localstatedir}/%{name} /bin/bash
+%_pre_useradd %{name} %{_localstatedir}/lib/%{name} /bin/bash
 
 %post
 %_post_service %{name}
@@ -64,6 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_initrddir}/%{name}
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 %{_mandir}/man8/*
-%dir %attr(-,upclient,upclient) %{_localstatedir}/%{name}
+%dir %attr(-,upclient,upclient) %{_localstatedir}/lib/%{name}
 %dir %attr(-,upclient,upclient) %{_var}/run/%{name}
 
