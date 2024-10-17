@@ -12,7 +12,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0:	http://uptime.hexon.cx/download/%{name}-%{version}b5.tar.bz2
 Source1:	%{name}.init.bz2
 Source2:	%{name}.conf.bz2
-URL:		http://uptime.hexon.cx/
+URL:		https://uptime.hexon.cx/
 Requires(post,preun):	rpm-helper
 
 %description
